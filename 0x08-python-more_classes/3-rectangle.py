@@ -2,6 +2,7 @@
 """This module  has a class for rectangule instances.
 The module has the class Rectangle.
 """
+import re
 from turtle import width
 
 
@@ -31,6 +32,14 @@ class Rectangle:
             return 0
         else:
             return 2 * self.height + 2 * self.width
+    def __str__(self):
+        if(self.height != 0 and self.width != 0):
+            a = self.width * "#" + "\n"
+            b = self.height * "#"
+            return ((self.height - 1) * a + b)
+        else:
+            return ("")
+    
     @property
     def width(self):
         return self.__width
