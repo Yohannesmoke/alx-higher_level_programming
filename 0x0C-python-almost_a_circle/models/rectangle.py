@@ -74,12 +74,11 @@ class Rectangle(Base):
         """public method """
         return (self.__width * self.__height)
 
-    def display(self):
-        """display the values"""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            print()
+   def display(self):
+        """ define display """
+        print(("\n" * self.__y) +
+              "\n".join(((" " * self.__x) + ("#" * self.__width))
+                        for i in range(self.__height))) 
 
     def __str__(self):
         """print a documented stdout"""
