@@ -11,8 +11,8 @@ class Square(Rectangle):
     """
     def __init__(self, size, x=0, y=0, id=None):
         """method initialization"""
-	super().__init__(size, size, x, y, id)
-	self.size = size
+        super().__init__(size, size, x, y, id)
+        self.size = size
 
     @property
     def size(self):
@@ -35,7 +35,8 @@ class Square(Rectangle):
                                                          self.x,
                                                          self.y,
                                                          self.width)
-   def update(self, *args, **kwargs):
+
+    def update(self, *args, **kwargs):
         """ define update """
         if len(args) > 0:
             if args[0] is not None:
@@ -65,4 +66,4 @@ class Square(Rectangle):
             returns the dictionary
             representation of a square
         """
-        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y} 
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
