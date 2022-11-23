@@ -75,7 +75,7 @@ class Rectangle(Base):
 
     def display(self):
         """define display"""
-       rectangle = ""
+        rectangle = ""
         symbol = "#"
         print("\n" * self.__y, end="")
         for i in range(self.__height):
