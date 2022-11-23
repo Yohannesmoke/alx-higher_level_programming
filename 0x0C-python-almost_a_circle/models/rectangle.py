@@ -76,7 +76,7 @@ class Rectangle(Base):
         """define display"""
         rectangle = ""
         arc = "#"
-        for i in range(self.height):
-            for j in range(self.weight):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 print("#", end="")
             print()
