@@ -90,8 +90,12 @@ class Rectangle(Base):
                                                                  self.__width,
                                                                  self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """define update"""
+        if len(args) == 0:
+            for arg in kwargs:
+                setattr(self, arg, kwargs.get(arg))
+            return
         try:
             self.id = args[0]
             self.__width = args[1]
