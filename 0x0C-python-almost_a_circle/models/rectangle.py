@@ -69,17 +69,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-
     def area(self):
-        """public method """
-        return (self.__width * self.__height)
-
-   def display(self):
-        """ define display """
-        print(("\n" * self.__y) +
-              "\n".join(((" " * self.__x) + ("#" * self.__width))
-                        for i in range(self.__height))) 
-
-    def __str__(self):
-        """print a documented stdout"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        """ area definer """
+        return self.__width * self.__height
